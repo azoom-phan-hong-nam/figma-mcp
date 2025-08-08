@@ -26,12 +26,30 @@ PHNam
 
 ---
 
-# ℹ️ Giới thiệu
+# 📡 Model Context Protocol
+
+- **Model Context Protocol (MCP)** là một giao thức mở giúp tích hợp liền mạch giữa các ứng dụng LLM với các nguồn dữ liệu và công cụ từ các ứng dụng bên ngoài.
+- Hoạt động theo kiến trúc client-host-server
+
+<img class="mcp-architecture mt-4" src="./images/mcp-architecture.png" />
+
+<style>
+.mcp-architecture {
+  height: 300px;
+  width: auto;
+  display: block;
+  margin-inline: auto;
+}
+</style>
+
+---
+
+# ℹ️ Giới thiệu Figma MCP
 
 <ul>
 <li>
 
-Tính năng <span v-mark.circle.red="1">(open BETA)</span> cho phép kết nối trực tiếp với công cụ lập trình.
+Tính năng <span v-mark.circle.red="1">(BETA)</span> cho phép kết nối trực tiếp với công cụ lập trình.
 [Give Feedback](https://form.asana.com/?k=jMdFq_1SBUOyh8_k3q76QA&d=10497086658021/)
 
 </li>
@@ -50,7 +68,6 @@ Tính năng <span v-mark.circle.red="1">(open BETA)</span> cho phép kết nối
   display: block;
   margin-inline: auto;
 }
-
 </style>
 ---
 
@@ -158,11 +175,18 @@ Use <script setup> and try to break it into sub-components as much as possible.
 - Chia nhỏ từng component
 - Yêu cầu dùng component có sẵn nếu có
 
+Example: 
+
+```txt
+Generate Nuxt 3 (Vue 3) components from selection, split into reusable parts, 
+reuse existing components, follow project styles, clean code.
+```
+
 ---
 
 # 🔁 Tái sử dụng với Code Connect
 
-- Mapping nodeID <-> component code
+- Mapping NodeID <-> Component Codebase
 - AI sẽ dùng `<BaseButton>` thay vì `<button>`
 - Dùng biến thiết kế (tokens) thay vì hard-code
 
@@ -170,9 +194,10 @@ Use <script setup> and try to break it into sub-components as much as possible.
 
 # 🧠 Best Practices
 
-- Dùng Component + Auto Layout + đặt tên rõ
-- Ghi chú Dev Mode (annotation)
-- Viết prompt ngắn, rõ
+- Dùng [Component](https://help.figma.com/hc/en-us/articles/360038662654-Guide-to-components-in-Figma) + [Auto Layout](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout) + đặt tên lớp/layer có ý nghĩa
+- Dùng biến thiết kế ([Variables](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma))
+- Ghi chú [Dev Mode (annotation)](https://help.figma.com/hc/en-us/articles/20774752502935-Add-measurements-and-annotate-designs)
+- Viết prompt mô tả rõ yêu cầu, mong muốn
 - Chạy thử & chỉnh sửa code nếu cần
 
 ---
@@ -181,11 +206,11 @@ Use <script setup> and try to break it into sub-components as much as possible.
 
 ```vue
 <template>
-  <div class="bg-white p-4 rounded-xl shadow">
-    <img src="" />
-    <h2 class="text-xl font-bold">{{ productName }}</h2>
-    <p class="text-gray-600">{{ price }}</p>
-    <button class="bg-blue-500 text-white">Buy Now</button>
+  <div class="product-card">
+    <img src="/path-to-product-image" />
+    <h2 class="name">{{ productName }}</h2>
+    <p class="price">{{ price }}</p>
+    <button class="button -buy">Buy Now</button>
   </div>
 </template>
 <script setup>
@@ -206,6 +231,9 @@ defineProps({ productName: String, price: String })
 
 # 📚 Tham khảo
 
+- [Model Context Protocol](https://modelcontextprotocol.io/specification/2025-06-18)
 - [Figma MCP Docs](https://help.figma.com/hc/en-us/articles/32132100833559)
 - [Vue School MCP Guide](https://vueschool.io/articles/vuejs-tutorials/the-model-context-protocol-mcp-for-web-developers/)
 - [Figma Blog](https://www.figma.com/blog/introducing-figmas-dev-mode-mcp-server/)
+
+<PoweredBySlidev mt-10 />
