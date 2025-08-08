@@ -87,7 +87,7 @@ routeAlias: prerequisite
 
 # ⚙️ Yêu cầu ban đầu
 
-- Figma Desktop đăng nhập tài khoản quyền Dev Mode/Full seat
+- [Figma Desktop](https://www.figma.com/downloads/) đăng nhập tài khoản quyền Dev Mode/Full seat
 - VS Code + GitHub Copilot Chat
 - Project Vue/Nuxt sẵn có
 - File thiết kế Figma
