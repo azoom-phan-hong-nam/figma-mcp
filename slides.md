@@ -2,6 +2,7 @@
 theme: seriph
 background: https://images.unsplash.com/photo-1653406759381-4d6ca279cab3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 title: Figma MCP - Turn your Figma Design to code
+author: PHNam (TrippleN)
 class: text-left
 drawings:
   persist: false
@@ -11,6 +12,10 @@ seoMeta:
   ogImage: auto
 layout: cover
 hideInToc: true
+fonts:
+  sans: Roboto
+  serif: Roboto Slab
+  mono: Fira Code
 
 ---
 
@@ -20,10 +25,14 @@ Turn your Figma Design to code
 
 PHNam
 
+---
+routeAlias: table-of-content
 --- 
 
 <Toc text-sm list-class="text-primary" minDepth="1" maxDepth="1" />
 
+---
+routeAlias: model-context-protocol
 ---
 
 # 📡 Model Context Protocol
@@ -42,6 +51,8 @@ PHNam
 }
 </style>
 
+---
+routeAlias: introduce-figma-mcp
 ---
 
 # ℹ️ Giới thiệu Figma MCP
@@ -69,6 +80,9 @@ Tính năng <span v-mark.circle.red="1">(BETA)</span> cho phép kết nối tr�
   margin-inline: auto;
 }
 </style>
+
+---
+routeAlias: prerequisite
 ---
 
 # ⚙️ Yêu cầu ban đầu
@@ -81,6 +95,7 @@ Tính năng <span v-mark.circle.red="1">(BETA)</span> cho phép kết nối tr�
 ---
 layout: two-cols
 layoutClass: gap-8
+routeAlias: enable-mcp-server
 ---
 
 # 🟢 Kích hoạt MCP Server
@@ -112,6 +127,9 @@ layoutClass: gap-8
 }
 
 </style>
+
+---
+routeAlias: config-vscode
 ---
 
 # 🖥️ Cấu hình VSCode
@@ -133,6 +151,8 @@ layoutClass: gap-8
 ```
 
 ---
+routeAlias: figma-mcp-tools
+---
 
 # 🛠️ Các công cụ của Figma MCP
 
@@ -142,11 +162,13 @@ layoutClass: gap-8
 <li v-click><code>get_code</code>: Generate code của node.</li>
 <li v-click><code>get_image</code>: Trả về ảnh chụp của node.</li>
 <li v-click><code>get_variable_defs</code>: Trả về các biến và kiểu được sử dụng như màu sắc, khoảng cách và kiểu chữ.</li>
-<li v-click><code>get_code_connect_map</code>: Trả về ánh xạ giữ figma node và component tương ứng trong source code.</li>
+<li v-click><code>get_code_connect_map</code>: Trả về ánh xạ giữa figma node và component tương ứng trong source code.</li>
 <li v-click><code>create_design_system_rules</code>: Tạo tệp quy tắc(rules) để cung cấp cho AI Agent.</li>
 
 </ul>
 
+---
+routeAlias: ai-generate-code
 ---
 
 # 🤖 Dùng AI sinh mã giao diện
@@ -160,6 +182,8 @@ Use <script setup> and try to break it into sub-components as much as possible.
 ```
 
 ---
+routeAlias: result
+---
 
 # 📦 Kết quả nhận được
 
@@ -167,6 +191,8 @@ Use <script setup> and try to break it into sub-components as much as possible.
   - `<template>` đúng bố cục Figma
   - `<script setup>` đã định nghĩa props
 
+---
+routeAlias: optimize-prompt
 ---
 
 # ✅ Tối ưu prompt hiệu quả
@@ -183,6 +209,8 @@ reuse existing components, follow project styles, clean code.
 ```
 
 ---
+routeAlias: reusable-components
+---
 
 # 🔁 Tái sử dụng với Code Connect
 
@@ -190,6 +218,8 @@ reuse existing components, follow project styles, clean code.
 - AI sẽ dùng `<BaseButton>` thay vì `<button>`
 - Dùng biến thiết kế (tokens) thay vì hard-code
 
+---
+routeAlias: best-practices
 ---
 
 # 🧠 Best Practices
@@ -200,6 +230,8 @@ reuse existing components, follow project styles, clean code.
 - Viết prompt mô tả rõ yêu cầu, mong muốn
 - Chạy thử & chỉnh sửa code nếu cần
 
+---
+routeAlias: sample
 ---
 
 # 🧪 Minh hoạ: ProductCard.vue
@@ -219,6 +251,8 @@ defineProps({ productName: String, price: String })
 ```
 
 ---
+routeAlias: conclude
+---
 
 # 🎯 Kết luận
 
@@ -227,6 +261,8 @@ defineProps({ productName: String, price: String })
 - Bắt đầu từ nhỏ → mở rộng dần
 - Duy trì mapping, cập nhật khi thiết kế đổi
 
+---
+routeAlias: references
 ---
 
 # 📚 Tham khảo
