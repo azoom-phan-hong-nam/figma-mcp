@@ -181,6 +181,15 @@ Generate a Vue 3 component for the selected Figma frame.
 Use <script setup> and try to break it into sub-components as much as possible.
 ```
 
+<img v-click class="prompt mt-4" src="./images/prompt.png">
+
+<style>
+.prompt {
+  display: block;
+  margin-inline: auto;
+}
+</style>
+
 ---
 routeAlias: result
 ---
@@ -190,6 +199,15 @@ routeAlias: result
 - Một hoặc nhiều file `.vue` gồm:
   - `<template>` đúng bố cục Figma
   - `<script setup>` đã định nghĩa props
+
+<img class="result mt-4" src="./images/generate-result.png">
+
+<style>
+.result {
+  display: block;
+  margin-inline: auto;
+}
+</style>
 
 ---
 routeAlias: optimize-prompt
@@ -217,6 +235,17 @@ routeAlias: reusable-components
 - Mapping NodeID <-> Component Codebase
 - AI sẽ dùng `<BaseButton>` thay vì `<button>`
 - Dùng biến thiết kế (tokens) thay vì hard-code
+
+<img v-click class="code-connect mt-4" src="./images/code-connect.png">
+
+<style>
+.code-connect {
+  height: 300px;
+  width: auto;
+  display: block;
+  margin-inline: auto;
+}
+</style>
 
 ---
 routeAlias: best-practices
